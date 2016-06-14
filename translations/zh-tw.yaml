@@ -4,7 +4,7 @@ languageName: "繁體中文(ZH-TW)"
 # Really generic things used in multiple places (use sparingly)
 ##############################
 generic:
-  actions: 操作
+  actions: 動作
   activate: 已啟用
   as: As
   closeModal: 關閉
@@ -36,22 +36,22 @@ generic:
 ##############################
 accountsPage:
   index:
-    header: 账号
-    localLink: 添加账号
+    header: 帳號
+    localLink: 增加帳號
     table:
       state: 狀態
       id: Id
       kind: 類型
       username: 用户名
-      name: 名称
-      identity: 标识
+      name: 名稱
+      identity: 身分
       noData: 当前无访问账号
-      noName: 无
+      noName: 無
   new:
-    header: 添加账号
+    header: 增加帳號
     form:
       username:
-        labelText: "登录用户名"
+        labelText: "登入名稱"
         placeholder: "例如:jsmith"
       password:
         labelText: "密码"
@@ -69,26 +69,26 @@ apiPage:
   header: "環境API Keys"
   actionButton: "增加環境API Key"
   content: |
-    環境API Keys與當前環境(<code>{displayName}</code>)绑定，仅能用于管理当前环境的资源。当前环境中具有权限的其他账号也能够管理这些API Keys。
+    環境API Keys與當前環境(<code>{displayName}</code>)關聯，僅能用於管理當前環境的資源。當前環境中具有權限的其他帳號也能夠管理這些API Keys。
   labelText: '端点:'
   table:
-    state: 状态
-    name: 名称
+    state: 狀態
+    name: 名稱
     description: 描述
     publicValue: "Access Key"
-    created: 已创建
-    noData: "此环境还没有创建API Keys"
-    noName: 无
-    noDescription: 无
-    noPublicValue: "无public value"
+    created: 已建立
+    noData: "此環境還沒有建立API Keys"
+    noName: 無
+    noDescription: 無
+    noPublicValue: "無public value"
   account:
-    header: "账号API Keys"
-    buttonText: "添加账号API Key"
+    header: "帳號API Keys"
+    buttonText: "增加帳號API Key"
     content:
-      paragraph1: "账号API Keys与你的用户账号绑定，"
-      paragraph2: 能够创建、删除及管理您有权限访问的所有环境。
+      paragraph1: "帳號API Keys與你的用戶帳號關聯，"
+      paragraph2: 能够建立、删除及管理您有權限訪問的所有環境。
     table:
-      noData: "您还没有创建任何账号API Keys。"
+      noData: "您還沒有建立任何帳號API Keys。"
 
 auditLogsPage:
   header: 审计日志
@@ -120,12 +120,12 @@ auditLogsPage:
 
 authPage:
   root:
-    header: 访问控制
+    header: 存取控制
   github:
     header:
-      text: GitHub访问控制
-      accessEnabled: 已启用
-      accessNotEnabled: 未设置
+      text: GitHub存取控制
+      accessEnabled: 已啟用
+      accessNotEnabled: 未設定
       accessEnabledSubtext:
         wasRestricted: "{appName} 已設定為允許 {wasRestricted} 訪問。"
         wasNotRestricted:
@@ -135,17 +135,17 @@ authPage:
         subtext: "{appName} 可以設定為允許一组 GitHub 用户和組織成員訪問。 由於當前未完成此設定，所以任何可以訪問此頁面(或API)的用户都對系統有完全控制權限。"
     authenticated:
       header:
-        text: 认证信息
-        enterpriseHostName: '企业版主机:'
+        text: 認證訊息
+        enterpriseHostName: '企業主機名稱:'
         clientId:
           text: '客户端ID:'
-          helpText: 要修改设置的GitHub应用，请在下方禁用访问控制后重新设置。
+          helpText: 要修改設定的GitHub應用，請在下方禁用存取控制後重新設定。
       siteAccess:
         accessControl:
-          header: 站点访问
-          helpText: "设置允许哪些GitHub用户登录并使用 {appName}。 <b>注意:</b> 添加到环境的成员会自动被设置为允许访问。"
-          radio1: 允许任何GitHub用户
-          radio2: 限制为特定GitHub用户及组织成员
+          header: 站點存取
+          helpText: "設定允許哪些GitHub用户登入並使用 {appName}。 <b>注意:</b> 添加到環境的成員會自動被設定為允許訪問。"
+          radio1: 允許任何GitHub用户
+          radio2: 限制為特定GitHub用户及組織成員
           isRestricted:
             header: 已授權的用戶及組織
             noIdentity: 無
@@ -153,42 +153,42 @@ authPage:
               saved: 已儲存
               saving: 儲存中...
               pre: 儲存授權設定
-            helpText: "缺省情况下，仅当用户是环境成员时才允许登录和访问 {appName}。"
+            helpText: "預設情况下，只有用户是環境成員時才允許登入和存取 {appName}。"
             customizeButton: 自訂
       disableAccess:
-        header: 危险区域&trade;
-        warning: '<b class="text-danger">警告:</b> 禁用访问控制将导致任何能够访问此页面或API的用户拥有对  {appName}  的完全控制权限。'
-        confirmDisable: "确认? 再次点击将关闭访问控制。"
-        disable: 关闭访问控制
+        header: 危險區域操作;
+        warning: '<b class="text-danger">警告:</b> 禁用存取控制將導致任何能夠存取此頁面或API的用户擁有對  {appName}  的完全控制權限。'
+        confirmDisable: "確認? 再次點選將關閉存取控制。"
+        disable: 關閉存取控制
     notAuthenticated:
-      header: "1. 設定GitHub應用"
+      header: "1. 設定GitHub用途"
       ul:
         li1:
-          text: '标准GitHub， <a href="https://github.com/settings/developers" target="_blank">点击此处</a> 在弹出的新窗口中进行应用设置。'
+          text: '標準版GitHub， <a href="https://github.com/settings/developers" target="_blank">點選此處</a> 在彈出的新視窗中進行用途設定。'
           ul:
-            li1: "企业版GitHub，请登录你的账号，点击Settings，然后点击Applications进行设置。"
+            li1: "企業版GitHub，請登入你的帳號，點選Settings，然後點擊Applications進行設定。"
         li2:
-          text: '点击 "Register new application" 并填写表单内容:'
+          text: '點選 "Register new application" 並填寫表單內容:'
           ul:
-            li1: '<b>Application name:</b> <span class="text-muted">任何您喜欢的应用名称, 例如 My {appName}</span>'
+            li1: '<b>Application name:</b> <span class="text-muted">任何您喜歡的應用名稱, 例如 My {appName}</span>'
             li2: "<b>Homepage URL: </b> "
             li3: '<b>Application description:</b> <span class="text-muted">Anything you like, optional</span>'
             li4: "<b>Authorization callback URL:</b>"
         li3:
-          text: '点击 "Register Application" '
+          text: '點選 "Register Application" '
       form:
-        headder: "2. 设置 {appName} 使用你的GitHub应用验证"
-        subtext: "将新创建GitHub应用的Client ID和Secret复制粘贴到下方的对应输入框中"
+        headder: "2. 設定 {appName} 使用您的GitHub應用認證"
+        subtext: "將新建立GitHub應用的Client ID和Secret複製黏貼到下方的對應輸入欄中"
         clientId:
           labelText: "Client ID"
         clientSecret:
           labelText: "Client Secret"
         ghEnterprise:
-          labelText: 使用私有GitHub企业版部署
+          labelText: 使用私有GitHub企業版佈署
         isGHEnterprise:
-          labelText: 使用安全连接
+          labelText: 使用安全連線
         enterpriseHost:
-          labelText: 企业版主机
+          labelText: 企業主機名稱
           placeholder: '例如:github.example.com'
     testAuth:
       header: "3. 测试并启用验证"
@@ -1997,12 +1997,12 @@ machine:
       creating: 创建安全组...
     portHelp:
       link: 了解更多
-      text: 关于将要开放的端口信息
+      text: 關於將要開放的連接埠訊息
     needs:
-      label: "{appName} 正常工作需要安全组允许以下通讯:"
-      item1: '从 {appName} 服务器到主机的 <code>TCP</code> 端口 <code>22</code> <span class="text-muted">(SSH连接以安装配置Docker)</span>'
-      item2: 与其他所有主机之间的 <code>UDP</code> 端口 <code>500</code> 和 <code>4500</code> <span class="text-muted">(用于IPsec网络)</span>
-      item3: 这些规则 <b>不会</b> 被自动添加
+      label: "{appName} 正常工作需要安全组允許以下通訊:"
+      item1: '從 {appName} 伺服器到主機的 <code>TCP</code> 連接埠 <code>22</code> <span class="text-muted">(SSH連接以安裝設定Docker)</span>'
+      item2: 與其他所有主機之間的 <code>UDP</code> 連接埠 <code>500</code> 和 <code>4500</code> <span class="text-muted">(用於IPsec網路)</span>
+      item3: 這些規則 <b>不會</b> 被自動增加
     selectSecurityGroupAction: '下一步:设置实例选项'
     loadingInstance: 读取可用实例配置...
     instanceSection: 实例
@@ -2044,7 +2044,7 @@ machine:
     apiKey:
       label: "API Key"
       placeholder: "你的RackSpace APK Key"
-    accountHelp: RackSpace控制面板中的账户配置
+    accountHelp: RackSpace控制面板中的帳號設定
     regionSection: 区域
     region:
       label: 区域
@@ -2110,69 +2110,69 @@ machine:
     network:
       label: 網路
     dataStore:
-      label: 數據存儲
+      label: 數據儲存
 
 modalAboutComponent:
-  component: 组件
+  component: 元件
   version: 版本
   cattle: Cattle
   ui: 用户界面
   compose: Compose
   machineService: "Machine Service"
   docerkMachine: docker-machine
-  close: 关闭
+  close: 關閉
 
 modalAuditlogInfo:
   header: 额外日志信息
-  request: '请求对象:'
-  response: '响应对象:'
-  closer: 关闭
+  request: '請求對象:'
+  response: '回應對象:'
+  closer: 關閉
 
 modalConfirmDeactiviate:
-  header: 是否确认要
+  header: 是否確認要
   protip: "高级技巧:在点击 {isServiceButton} 时按住 {alternateLabel}  键以跳过确认操作"
   cancel: 取消
 
 modalEditDriver:
   header:
-    create: "添加Machine 驱动"
-    edit: "编辑Machine 驱动"
+    create: "增加 Machine 驅動"
+    edit: "編輯 Machine 驅動"
   url:
     label: 下载URL
-    help: "64位Linux Docker-Machine驱动下载地址"
+    help: "64位Linux Docker-Machine驅動下載位址"
   uiUrl:
-    label: "自定义UI URL"
-    help: 可选:加载该驱动自定义添加主机界面的URL
-    link: '参考 <a href="https://github.com/rancher/ui-driver-skel" target="_blank">ui-driver-skel</a> 以了解更多信息。'
+    label: "自定義UI URL"
+    help: 可選:加載該驅動自定義增加主機介面的URL
+    link: '參考 <a href="https://github.com/rancher/ui-driver-skel" target="_blank">ui-driver-skel</a> 以了解更多訊息。'
   checksum:
-    label: 校验和
-    help: "可选: 检验下载的驱动是否匹配期望的校验和"
+    label: 校驗
+    help: "可選: 检验下载的驱动是否匹配期望的校验和"
 
 modalProcessError:
-  header: 异常信息
+  header: 異常訊息
   cause: '原因:'
   none: N/A
-  stackTrace: '堆栈跟踪:'
-  close: 关闭
+  stackTrace: '堆栈追蹤:'
+  close: 關閉
 
 modalShell:
   title: "命令行:{instanceName}"
 
 newAliasService:
-  header: 添加服务别名
+  header: 增加服務别名
 
 newBalancer:
-  header: 添加负载均衡
+  header: 增加負載均衡
   note: |
     <p><strong>注意:</strong> 未匹配任何&quot;高级路由选项&quot;的请求将被发送到<strong>全部</strong> ({targetResources}) 配置的目标服务（轮询方式）的默认目标端口（根据请求的源端口确认）。</p>
   tabs:
     ssl: SSL终止
     stickiness: 会话粘性
-    custom: 自定义haproxy.cfg
-    labels: 标签
-    scheduling: 调度
+    custom: 自定義haproxy.cfg
+    labels: 標籤
+    scheduling: 調度
   helpBlock: |
-    <p class="help-block">此处可以设置其他 <a href="http://cbonte.github.io/haproxy-dconv/configuration-1.5.html" target="_blank">haproxy.cfg</a> 配置项，相关内容将被附加到 {appName} 生成的配置中。 </p>
+    <p class="help-block">此處可以設定其他 <a href="http://cbonte.github.io/haproxy-dconv/configuration-1.5.html" target="_blank">haproxy.cfg</a> 配置项，相关内容将被附加到 {appName} 生成的配置中。 </p>
   labelGlobal: <code>global</code> section
   labelDefault: <code>defaults</code> section
 
@@ -2184,7 +2184,7 @@ newCatalog:
   saveNew: 启动
   upgrade: '升级:'
   catalog: '应用商店:'
-  category: '类别:'
+  category: '類別:'
   support: '支援:'
   official: 官方認證
   maintainedBy: 由社區成員維護
@@ -2213,7 +2213,7 @@ newContainer:
     command: 命令
     volumes: 卷
     networking: 網路
-    security: 安全/主机
+    security: 安全/主機
     healthCheck: 健康检查
     labels: 標籤
     scheduling: 調度
@@ -2236,7 +2236,7 @@ newExternalService:
 
 pageFooter:
   notARelease: (非正式发布)
-  help: 帮助
+  help: 幫助
   documentation: 文件
   faq: 常見問題
   issues: 提交問題
