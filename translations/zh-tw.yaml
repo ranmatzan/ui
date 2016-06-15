@@ -191,97 +191,97 @@ authPage:
           labelText: 企業主機名稱
           placeholder: '例如:github.example.com'
     testAuth:
-      header: "3. 测试并启用验证"
-      subtext: 测试以确认你的配置是否正确
+      header: "3. 測試並啟用驗證"
+      subtext: 測試認證來檢查您的應用程式設定是正確的
       buttonText:
-        pre: GitHub验证
-        post: 等待GitHub返回
+        pre: GitHub驗證
+        post: 等待GitHub回覆
   localAuth:
     header:
-      enabled: "本地验证 <b>已启用</b>"
-      disabled: '本地验证 <b class="text-warning">未设置</b>'
+      enabled: "本地驗證 <b>已啟用</b>"
+      disabled: '本地驗證 <b class="text-warning">未配置</b>'
     subtext:
       enabled:
-        text: "{appName} 已设置为允许本地数据库中的账号访问。"
-        linkText: 管理账号
-      disabled: "{appName} 能够被设置为仅允许 {appName} 本地数据库中定义的用户访问。 当前系统未进行设置， 因此任何访问此页面（或API）的用户都具有系统的完全控制权限。"
+        text: "{appName} 已設定為允許本地資料庫中的帳號存取。"
+        linkText: 帳號管理
+      disabled: "{appName} 能夠被設定為僅允許 {appName} 本地資料庫中定義的用戶訪問。 目前系統未進行設定， 因此任何訪問此頁面（或API）的用户都具有系统的完全控制權限。"
     accessEnabled:
-      header: 危险区域&trade;
-      warning: '<b class="text-danger">警告:</b> 禁用访问控制将导致任何能够访问此页面或API的用户拥有对  {appName}  的完全控制权限。'
+      header: 危險區域操作;
+      warning: '<b class="text-danger">警告:</b> 禁用存取控制將導致任何能够訪問此頁面或API的用户擁有對  {appName}  的完全控制權限。'
       buttonText:
-        disable: "确认? 再次点击将关闭访问控制。"
-        prompt: 关闭访问控制
+        disable: "確認? 再次點選將關閉存取控制。"
+        prompt: 關閉存取控制
     accessDisabled:
-      header: "1. 设置管理员用户"
-      helpText: "该账户将成为管理员并拥有对 {appName} 的完全控制权限"
+      header: "1. 設定管理員用戶"
+      helpText: "該帳戶將成為管理員並擁有對 {appName} 的完全控制權限"
       form:
         login:
-          labelText: 登录用户名
+          labelText: 登入用戶名
           placeholder: '例如:jsmith'
         name:
           labelText: 全名
           placeholder: "例如:John Smith"
         password:
-          labelText: 密码
+          labelText: 密碼
         confirmPassword:
-          labelText: 确认密码
+          labelText: 確認密碼
     accessControl:
-      header: 启用访问控制
-      helpText: 点击以开启访问控制并登陆
+      header: 啟用存取控制
+      helpText: 點選以開啟存取控制並登入
       buttonText:
-        pre: 启用本地验证
-        post: 启用中...
+        pre: 啟用本地驗證
+        post: 啟用中...
 
 catalogPage:
   index:
     header: 应用商店
     search:
-      placeholder: 搜索....
-    certified: 官方认证
+      placeholder: 搜尋....
+    certified: 官方認證
     noData:
       singular: 没有符合的应用模板
       plural: 当前目录下没有符合的应用模板
 
 consolePage:
   header: '命令行:'
-  closeButton: 关闭
+  closeButton: 關閉
 
 certificatesPage:
   table:
     cn: 域名
-    expiresDate: 过期时间
-    noCn: 无
+    expiresDate: 到期時間
+    noCn: 無
   detail:
-    header: 证书
+    header: 憑證
     description: 描述
     info:
-      labelText: 信息
-      valid: 生效时间
-      expires: 过期时间
+      labelText: 訊息
+      valid: 生效時間
+      expires: 到期時間
       algorithm: 算法
-      issuer: 发布机构
-      serialNumber: 序列号
+      issuer: 發布機構
+      serialNumber: 序號
       version: 版本
     domainNames:
       labelText: 域名
   index:
-    header: 证书
-    linkTo: 添加证书
+    header: 憑證
+    linkTo: 添加憑證
     table:
       header:
-        state: 状态
-        name: 名称
+        state: 狀態
+        name: 名稱
         domain: 域名
-        expires: 过期时间
+        expires: 到期時間
       body:
-        noData: 当前未添加任何证书
+        noData: 目前未添加任何憑證
   new:
-    header: 添加证书
+    header: 添加憑證
     form:
       name:
         placeholder: '例如:mydomain.com'
       description:
-        placeholder: '例如:mydomain.com的EV证书'
+        placeholder: '例如:mydomain.com的EV憑證'
 
 containersPage:
   table:
@@ -295,14 +295,14 @@ containersPage:
     sparkPrefixNetwork: "網路:"
     sparkPrefixStorage: "存儲:"
     command: 命令
-    noCommand: 无
+    noCommand: 無
   index:
     header: 容器
     linkTo: 添加容器
     table:
       header:
-        state: 状态
-        name: 名称
+        state: 狀態
+        name: 名稱
         ip: IP位置
         host: 主機
         image: 映像
@@ -318,49 +318,49 @@ containersPage:
   containerPage:
     header: '容器:'
     subtext:
-      on: 位于
-      in: 所属服务
+      on: 位於
+      in: 所屬服務
     infoMultiStats:
       tooltip:
-        host: 复制到剪贴板
-      host: '主机:'
+        host: 複製到剪貼簿
+      host: '主機:'
       ip: '容器IP:'
       docker: "Docker ID:"
-      image: '镜像:'
+      image: '映像:'
       command: '命令:'
       entryPoint: '入口:'
       description: '描述:'
     navTabs:
-      labels: '标签:'
+      labels: '標籤:'
       volumes: 卷
       ports: 連接埠
     portsTab:
       table:
         header:
-          state: 状态
-          ip: IP地址
+          state: 狀態
+          ip: IP位置
           public: 主机映射端口
           private: 容器私有端口
-          protocol: 协议
+          protocol: 協定
         body:
-          state: 状态
-          ip: IP地址
-          public: 主机映射端口
-          private: 容器私有端口
-          protocol: 协议
-          noData: 该容器未暴露任何端口。
+          state: 狀態
+          ip: IP位置
+          public: 主機映射連接埠
+          private: 容器內部連接埠
+          protocol: 協定
+          noData: 此容器未暴露任何連接埠。
     volumesTab:
       table:
         header:
-          state: 状态
-          mount: 挂载点
+          state: 狀態
+          mount: 掛載點
           shared: 共享
-          writable: 可写
+          writable: 可寫
         body:
-          state: 状态
-          mount: 挂载点
+          state: 狀態
+          mount: 掛載點
           shared: 共享
-          writable: 可写
+          writable: 可寫
           error:
             data: '错误:'
             error: 错误
