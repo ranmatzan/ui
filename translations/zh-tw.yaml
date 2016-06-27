@@ -826,7 +826,7 @@ servicePage:
       name:
         placeholder: '例如:myapp'
       description:
-        placeholder: '例如:我的应用'
+        placeholder: '例如:我的應用'
   newAlias:
     form:
       name:
@@ -838,238 +838,238 @@ servicePage:
       name:
         placeholder: '例如:website'
       description:
-        placeholder: '例如:mycompany.com的负载均衡'
+        placeholder: '例如:mycompany.com的負載平衡'
   portsTab:
     table:
       header:
-        port: 端口
-        host: 主机IP
+        port: 連接埠
+        host: 主機IP
       body:
-        noData: 服务没有暴露任何端口
-    notActive: 端口仅当服务处于活动状态时可见
+        noData: 服務沒有暴露任何連接埠
+    notActive: 連接埠僅當服務處於活動狀態時可見
 
 settingsPage:
   index:
-    header: 环境
-    linkTo: 添加环境
+    header: 環境
+    linkTo: 增加環境
     subtext: |
-      <p> {appName} 支持将资源分组归属到多个<b>环境</b>中。每个环境具有自己独立的基础架构资源及服务，并由一个或多个用户、团队或组织所管理。</p>
-      <p>例如，您可以创建独立的“开发”、“测试”及“生产”环境以确保环境之间的安全隔离，将“开发”环境的访问权限赋予全部人员，但限制“生产”环境的访问权限给一个小的团队。</p>
+      <p> {appName} 支援將資源分組歸屬到多個<b>環境</b>中。每個環境具有自己獨立的基礎架構資源及服務，並由一個或多個用戶、團隊或組織所管理。</p>
+      <p>例如，您可以創建獨立的“開發”、“測試”及“生產”環境以確保環境之間的安全隔離，將“開發”環境的存取權限賦予全部人員，但限制“生產”環境的存取權限給一個小的團隊。</p>
 
-    alert: 当前没有活动环境。在进行其他操作前，需要先创建或激活一个环境。
+    alert: 當前沒有活動環境。在進行其他操作前，需要先建立或啟用一個環境。
     table:
       header:
-        orchestration: 编排
+        orchestration: 編排
       body:
-        noData: 当前未创建任何环境
+        noData: 當前未建立任何環境
 
 stacksPage:
   header:
-    all: 全部应用
-    user: 用户应用
-    system: 系统应用
-  actionButton: 添加应用栈
+    all: 全部應用
+    user: 用戶應用
+    system: 系統應用
+  actionButton: 增加應用棧
   sort:
     label: 排序
-    state: 状态
-    name: 名称
-  noSystemStacks: 当前没有系统应用
+    state: 狀態
+    name: 名稱
+  noSystemStacks: 當前沒有系統應用
   new:
-    header: 添加应用栈
-    composeLabel: '可选:导入Compose'
+    header: 增加應用棧
+    composeLabel: '可選:匯入Compose'
     form:
       name:
         placeholder: '例如:myapp'
       description:
-        placeholder: '例如:我的应用'
+        placeholder: '例如:我的應用'
       dockerCompose:
-        label: '可选:docker-compose.yml'
+        label: '可選:docker-compose.yml'
         placeholder: docker-compose.yml文件的内容
       rancherCompose:
-        label: '可选:rancher-compose.yml'
+        label: '可選:rancher-compose.yml'
         placeholder: rancher-compose.yml文件的内容
       startOnCreate:
-        label: 创建后启动服务
+        label: 建立後啟動服務
 
 storagePoolsPage:
   index:
-    header: 存储池
-    noData: 无存储池
+    header: 存儲池
+    noData: 無存儲池
   newVolume:
-    header: 添加卷
+    header: 增加卷
     form:
-      driverOptions: 驱动选项
-      addActionLabel: 添加选项
+      driverOptions: 驅動選項
+      addActionLabel: 增加選項
 
 swarmPage:
   projects:
     index:
-      header: 项目
-      linkTo: 添加项目
+      header: 項目
+      linkTo: 增加項目
       table:
         header:
-          services: 服务
+          services: 服務
         body:
-          noData: 当前没有任何项目
+          noData: 目前沒有任何項目
     new:
-      header: 添加项目
+      header: 增加項目
       form:
         name:
           placeholder: '例如:myapp'
         description:
           placeholder: '例如:MyApp Project'
         variables:
-          addActionLabel: 添加变量替换
-          keyLabel: 变量
+          addActionLabel: 新增變量替代
+          keyLabel: 變量
           keyPlaceholder: '例如:foo'
           valuePlaceholder: '例如:bar'
         dockerCompose:
           labelText: dcoker-compose.yml
-          placeholder: 粘贴docker-compose.yml文件的内容
+          placeholder: 貼上docker-compose.yml文件的內容
     project:
-      linkTo: '项目:'
+      linkTo: '項目:'
       table:
         header:
-          ports: 端口
+          ports: 連接埠
           containers: 容器
         body:
-          noData: 当前项目不包含任何服务
+          noData: 目前項目未包含任何服務
   services:
-    header: 服务
+    header: 服務
     table:
       header:
-        ports: 端口
+        ports: 連接埠
         containers: 容器
       body:
-        noData: 当前没有任何服务
+        noData: 目前沒有任何服務
 
 processesPage:
   indexPage:
-    header: 进程
+    header: 處理
     tabNav:
-      running: 运行中
+      running: 運行中
       all: 全部
     form:
-      resourceType: '选择资源类型:'
+      resourceType: '選擇資源類型:'
       resourceId:
-        placeholder: 资源ID
+        placeholder: 資源ID
       processName:
-        placeholder: 进程名
+        placeholder: 處理名
       clear: 清除
-      search: 搜索
+      search: 搜尋
     table:
       header:
         id: ID
-        processName: 名称
-        resource: '资源类型:ID'
+        processName: 名稱
+        resource: '資源類型:ID'
         exitReason: 退出原因
-        startTime: 开始时间
-        endTime: 结束时间
-        duration: 持续时间
-      noData: 无进程
+        startTime: 開始時間
+        endTime: 結束時間
+        duration: 持續時間
+      noData: 無處理程序
   processPage:
-    header: 设置
+    header: 設定
 
 virtualMachinePage:
-  header: '虚拟机:'
+  header: '虛擬機:'
   multistat:
-    host: '主机:'
-    hostIp: '主机IP:'
-    vmIp: '虚拟机IP:'
-    image: '镜像:'
+    host: '主機:'
+    hostIp: '主機IP:'
+    vmIp: '虛擬機IP:'
+    image: '映像:'
     description: '描述:'
   navTabs:
-    labels: 标签
+    labels: 標籤
 
 virtualMachinesPage:
-  header: 虚拟机
-  linkTo: 添加虚拟机
+  header: 虛擬機
+  linkTo: 新增虛擬機
   table:
     body:
-      noData: 当前没有任何虚拟机
+      noData: 目前沒有任何虛擬機
 
 waitingPage:
   hosts:
     header: |
       {expectHosts, plural,
-        =1 {添加第一台主机}
-        other {添加主机}
+        =1 {新增第一台主機}
+        other {新增主機}
       }
     content: |
-      至少需要添加 {expectHosts, plural,
-        =1 {1台支持}
-        other {# 台支持}
-      } Docker {minVersion} 或以上版本的Linux主机，该主机需要能够通过HTTP方式访问{appName} 服务器。<br/>
-      {appName} 支持添加多种形式的Linux主机，包括由任何公有云、私有云或裸机方式提供的虚拟机或物理机。
+      至少需要新增 {expectHosts, plural,
+        =1 {1台支援}
+        other {# 台支援}
+      } Docker {minVersion} 或以上版本的Linux主機，該主機需要能夠通過HTTP方式存取{appName} 伺服器。<br/>
+      {appName} 支援新增多種形式的Linux主機，包含由任何公有雲、私有雲或裸機方式提供的虛擬機或時體機。
     contentLink: 了解更多
-    linkToHost: 添加主机
+    linkToHost: 新增主機
     setup:
-      mesos: 设置Mesos
-      swarm: 设置Swarm
-      kubernetes: 设置Kubernetes
+      mesos: 設定Mesos
+      swarm: 設定Swarm
+      kubernetes: 設定Kubernetes
 
 ##############################
 # Partials
 ##############################
 aliasServicePartial:
   serviceLinks:
-    labelText: 服务链接
-    linkTo: 查看详情
-  links: 链接
-  noLinks: 无链接
+    labelText: 服務連接
+    linkTo: 查看詳情
+  links: 連接
+  noLinks: 無連接
   description: '描述:'
 
 externalServicePartial:
   extService:
-    labelText: 外部服务
-    linkTo: 查看详情
+    labelText: 外部服務
+    linkTo: 查看詳情
   ips: IPs
-  hostname: '主机名称:'
+  hostname: '主機名稱:'
   description: '描述:'
 
 hostPartial:
   host:
     addCommon:
-      quanity: 数量
+      quanity: 數量
       new:
         form:
           name:
             placeholder: '例如:host01'
     addOptions:
-      labels: 标签
+      labels: 標籤
 
 ldap:
   providerName:
     openldap: OpenLDAP
-    ad: 活动目录
+    ad: Active Directory活动目录
   configuredIndication:
     header:
       providerName: "{providerName} 是"
-      enabled: 启用
-      disabled: 未设置
+      enabled: 啟用
+      disabled: 停用
       subtext:
-        enabled: "{appName} 已设置为允许任何 {providerName} 用户访问。"
-        disabled: "{appName} 可以设置为仅允许特定的用户和组成员访问。当前系统未设置，任何能够访问此页面或API的用户拥有对  {appName} 的完全控制权限。"
+        enabled: "{appName} 已設定為允許任何 {providerName} 用戶存取。"
+        disabled: "{appName} 可以設定為允許特定的用戶和群組成員存取。當前系統未設定，任何能夠訪問此頁面或API的用户擁有對 {appName} 的完全控制權限。"
   accessEnabled:
-    header: 验证
-    subtext: 如需修改服务器配置，请在下方关闭访问控制后重新设置。
+    header: 驗證
+    subtext: 如需修改伺服器配置，請在下方關閉存取控制後重新設定。
     general:
-      header: 常规
-      server: '服务器:'
+      header: 一般
+      server: '伺服器:'
       tls: 'TLS:'
-      serviceAccount: '服务账号:'
-      searchBase: '搜索起点:'
-      defaultDomain: '缺省域:'
+      serviceAccount: '服務帳號:'
+      searchBase: '搜尋基準:'
+      defaultDomain: '預設域名:'
     users:
-      header: 用户
-      objectClass: '对象分类:'
-      login: '登录字段:'
-      name: '名称字段:'
-      search: '搜索字段:'
-      enabled: '启用字段:'
-      disabledBitMask: '禁用位掩码:'
+      header: 用戶
+      objectClass: '對象類別:'
+      login: '登入領域:'
+      name: '名稱領域:'
+      search: '搜尋領域:'
+      enabled: '啟用領域:'
+      disabledBitMask: '關閉位元遮罩:'
     group:
-      header: 组
+      header: 群組
       objectClass: '对象分类:'
       name: '名称字段:'
       search: '搜索字段:'
