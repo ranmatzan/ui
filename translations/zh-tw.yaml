@@ -1070,18 +1070,18 @@ ldap:
       disabledBitMask: '關閉位元遮罩:'
     group:
       header: 群組
-      objectClass: '对象分类:'
-      name: '名称字段:'
-      search: '搜索字段:'
+      objectClass: '對象類別:'
+      name: '名稱領域:'
+      search: '搜尋領域:'
     disable:
-      header: 危险区域&trade;
-      warning: '<b class="text-danger">警告:</b> 禁用访问控制将导致任何能够访问此页面或API的用户拥有对  {appName} 的完全控制权限。'
+      header: 危險區域&trade;
+      warning: '<b class="text-danger">警告:</b> 禁用存取控制將導致任何能夠存取此頁面或API的用戶擁有對  {appName} 的完全控制權限。'
       confirmDisable:
-        pre: 关闭访问控制
-        post: "确认? 再次点击将关闭访问控制。"
+        pre: 關閉存取控制
+        post: "確定? 再次點選將關閉訪問控制。"
   accessConfig:
-    header: "1. 配置 {providerName} 服务器"
-    subtext1: "请输入地址、端口及协议以连接你的 {providerName} 服务器。<code>389</code> 是标准端口（未加密）, <code>636</code> 是加密连接（TLS）端口。"
+    header: "1. 設定 {providerName} 伺服器"
+    subtext1: "請輸入位置、連接埠及協定以連接你的 {providerName} 伺服器。<code>389</code> 是標準連接埠（未加密）, <code>636</code> 是加密連接（TLS）埠。"
     subtext2: "{appName} 需要一个对所有登录域有只读权限的服务账号"
     hostName:
       labelText: 主机名或IP地址
