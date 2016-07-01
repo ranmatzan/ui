@@ -1082,81 +1082,81 @@ ldap:
   accessConfig:
     header: "1. 設定 {providerName} 伺服器"
     subtext1: "請輸入位置、連接埠及協定以連接你的 {providerName} 伺服器。<code>389</code> 是標準連接埠（未加密）, <code>636</code> 是加密連接（TLS）埠。"
-    subtext2: "{appName} 需要一个对所有登录域有只读权限的服务账号"
+    subtext2: "{appName} 需要一個可登入所有區域的唯讀權限帳號，當他們建立一個要求與API key，可讓我們決定哪個群組的使用者是成員。"
     hostName:
-      labelText: 主机名或IP地址
+      labelText: 主機名或IP位置
     port:
-      labelText: 端口
+      labelText: 連接埠
       checkbox: TLS
     serviceUsername:
-      labelText: 服务账号用户名
+      labelText: 服務帳號名
     servicePassword:
-      labelText: 服务账号密码
+      labelText: 服務帳號密碼
     searchBase:
-      helpText: 仅当用户和组位于搜索起点下时才会被使用
-      labelText: '搜索起点:'
+      helpText: 僅當用戶和群組在搜尋基礎下時才會被使用
+      labelText: '搜尋基準:'
       placeholder: "例如:dc=mycompany,dc=com"
     defaultDomain:
-      helpText: 当用户未指定登录域时使用该域
-      labelText: 默认登录域
+      helpText: 當用戶未指定登入域名時的預設使用該域名
+      labelText: 預設登入域名
       placeholder: '例如:mycompany'
   customizeSchema:
-    header: "2. 自定义架构"
-    helpText: 如果你的活动目录架构(Schema)不是标准格式，可以在这里进行自定义设置。
+    header: "2. 自訂架構"
+    helpText: 如果你的AD架構(schema)不是標準格式，可以在這裡進行自訂義設定。
     users:
-      header: 用户
+      header: 使用者
       objectClass:
-        labelText: 对象类型
+        labelText: 對象類型
       login:
-        labelText: 登录字段
+        labelText: 登入領域
       name:
-        labelText: 名称字段
+        labelText: 名稱領域
       search:
-        labelText: 搜索字段
+        labelText: 搜索領域
       status:
-        labelText: 状态字段
+        labelText: 狀態領域
       disabledBitMask:
-        labelText: 禁用状态位掩码
+        labelText: 禁用狀態位元遮罩
     groups:
-      header: 组
+      header: 群組
       objectClass:
-        labelText: 对象分类
+        labelText: 對象領域
       name:
-        labelText: 名称字段
+        labelText: 名稱領域
       search:
-        labelText: 搜索字段
+        labelText: 搜索領域
   testAuth:
-    header: "3. 测试并启用验证"
-    helpText: "通过你的 {providerName} 账号进行验证测试以确认配置是否正确:"
+    header: "3. 測試並啟用驗證"
+    helpText: "透過你的 {providerName} 帳號進行驗證測試以確認配置是否正確:"
     userName:
-      labelText: 你的用户名
+      labelText: 你的用戶名
     password:
-      labelText: 你的密码
+      labelText: 你的密碼
     authenticate:
-      pre: 验证
-      post: "测试中..."
+      pre: 驗證
+      post: "測試中..."
 
 servicePartial:
   noContainers:
-    label: 没有容器
+    label: 沒有容器
     inactive:
-      start: 启动
+      start: 啟動
 
 serviceInfoPartial:
   info:
-    label: 信息
-    linkTo: 查看详情
-  image: '镜像:'
+    label: 資訊
+    linkTo: 查看詳情
+  image: '映像:'
   entryPoint: '入口:'
   command: '命令:'
   description: '描述:'
   containers: 容器
-  scale: 数量
-  noContainers: 无容器
-  ports: 端口
-  noPublicPorts: 无映射端口
-  links: 链接
-  noLinks: 无链接
+  scale: 數量
+  noContainers: 無容器
+  ports: 連接埠
+  noPublicPorts: 無連接埠映射
+  links: 連接
+  noLinks: 無連接
   fqdn: 'FQDN:'
 ##############################
 # Components
@@ -1164,103 +1164,103 @@ serviceInfoPartial:
 accountRow:
 
 advancedSection:
-  hrText: 高级选项
+  hrText: 進階選項
 
 catalogSettings:
-  header: 应用商店
-  subtext: 应用商店包含应用的rancher-compose模板，用户能够在回答设置问题后简单快速的进行应用部署。
+  header: 應用商店
+  subtext: 應用商店包含應用rancher-compose的範本，允許用戶通過回答設定問題後簡單地進行應用佈署。
   rancherCertified:
     header:
-      rancherCertified: "{appName} 官方认证"
-      plCertified: 官方认证
+      rancherCertified: "{appName} 官方認證"
+      plCertified: 官方認證
     helpText:
-      isRancher: 官方认证模板由Rancher Labs维护并提供支持
-      community: 正式维护和支持模板
+      isRancher: 官方認證範本由Rancher Labs維護並提供升級
+      community: 正是維護和支援範本
   community:
-    header: 社区贡献
+    header: 社區貢獻
     helpText:
-      text: 由社区成员创建并维护的模板
-      isRancher: "未经过Rancher Labs认证"
+      text: 由社區成員建立並維護的範本
+      isRancher: "未經過Rancher Labs認證"
   more:
     header: 更多
-    helpText: '此处可以添加自定义的应用商店。每个应用商店必须有唯一的名称和一个支持 <code>git clone</code> 操作的URL。（更多信息请参考此 <a href="https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a" target="_blank">文档</a>）'
-    addActionLabel: 添加应用商店
-    keyLabel: 名称
+    helpText: '此處可增加自訂義的應用商店。每個應用商店必須有唯一的名稱和能進行 <code>git clone</code> 操作的URL。（更多信息请参考此 <a href="https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a" target="_blank">文件</a>）'
+    addActionLabel: 增加應用商店
+    keyLabel: 名稱
     keyPlaceholder: '例如:mycatalog'
     valueLabel: URL
     valuePlaceholder: '例如:https://github.com/mycompany/mycatalog.git'
 
 confirmDelete:
-  title: 是否确认要删除
-  environmentNote: "注意:此环境内的所有资源都将被永久性的删除，包括通过{appName}创建的主机。"
-  protip: "高级技巧:在点击删除时按住 {key} 键以跳过确认操作。"
-  confirmAction: 删除
+  title: 確認是否要刪除
+  environmentNote: "注意:此環境內的所有資源都將被永久性的刪除，包含通過{appName}建立的主機。"
+  protip: "進階技巧:在點選刪除時按住 {key} 鍵以跳過確認操作。"
+  confirmAction: 刪除
   cancelAction: 取消
 
 containerLogs:
-  title: "日志: {instanceName}"
-  onlyCombined: "<b>注意:</b> 此容器运行时带有TTY(-t)参数，仅有合并的标准输出和标准错误日志可见"
-  combined: 合并日志
-  stdout: 标准输出
-  stderr: 标准错误
-  protip: "高级技巧: 点击查看日志时按住 {key} 键在新窗口中打开"
-  scrollTop: 回到顶部
+  title: "日誌: {instanceName}"
+  onlyCombined: "<b>注意:</b> 此容器運作時帶有TTY(-t)參數，僅有合併的標準輸出和標準錯誤日誌"
+  combined: 合併日誌
+  stdout: 標準輸出
+  stderr: 標準錯誤
+  protip: "進階技巧: 點選查看日誌時按住 {key} 鍵在新視窗中打開"
+  scrollTop: 回到頂部
   scrollBottom: 回到底部
-  clear: 清除屏幕
+  clear: 清除畫面
   status:
     initializing: 初始化...
-    connecting: 连接中...
-    connected: 已连接
-    disconnected: 已断开
-    closed: 已关闭
+    connecting: 連接中...
+    connected: 已連接
+    disconnected: 已中斷
+    closed: 已關閉
 
 containerShell:
-  protip: "高级技巧: 点击运行命令行时按住 {key} 键在新窗口中打开"
+  protip: "進階技巧: 點選運作命令時按住 {key} 鍵在新窗口中打開"
   status:
     initializing: 初始化...
-    error: "错误:{error}"
-    connecting: 连接中...
-    connected: 已连接
-    disconnected: 已断开
-    closed: 已关闭
+    error: "錯誤:{error}"
+    connecting: 連接中...
+    connected: 已連接
+    disconnected: 已中斷
+    closed: 已關閉
 
 copyToClipboard:
-  tooltip: 复制到剪贴板
-  copied: 已复制
+  tooltip: 複製到剪貼簿
+  copied: 已複製
 
 devicePermissions:
   all: 全部
-  none: 无
-  read: 读
-  write: 写
+  none: 無
+  read: 讀
+  write: 寫
   mknod: Mknod
 
 editAccount:
-  title: 编辑账号
+  title: 編輯帳號
   form:
     name:
-      label: 名称
+      label: 名稱
       placeholder: "例如:John Smith"
     kind:
-      label: 账号类型
+      label: 帳號類型
       user: 用户
-      admin: 管理员
+      admin: 管理員
     description:
       label: 描述
-      placeholder: "例如:John Smith的账号"
+      placeholder: "例如:John Smith的帳號"
     publicValue:
-      label: 登录用户名
+      label: 登入用戶名
     oldPassword:
-      label: 当前密码
+      label: 目前密碼
     newPassword:
-      label: 新密码
+      label: 新密碼
     confirmPassword:
-      label: 确认密码
+      label: 確認密碼
     identity:
-      label: 标识
+      label: 標籤
 
 editAliasService:
-  title: 编辑服务别名
+  title: 編輯服務別名
 
 editApiKey:
   title:
