@@ -1264,117 +1264,117 @@ editAliasService:
 
 editApiKey:
   title:
-    justCreated: "API Key已创建"
-    editing: "编辑API Key"
+    justCreated: "API Key已建立"
+    editing: "編輯API Key"
     new: "新建API Key"
   publicValue:
-    label: "Access Key (用户名)"
+    label: "Access Key (用戶名)"
   secretValue:
-    label: "Secret Key (密码)"
+    label: "Secret Key (密碼)"
   name:
     placeholder: "例如:App servers"
   description:
-    placeholder: "例如:用于app server部署容器"
-  saveWarning1: "请保存上面的Key！Secret Key仅显示一次"
-  saveWarning2: "如果忘记了Secret Key，您需要重新创建新的API Key"
-  noteOptional: "名称和描述均为可选项（有助于记录API Key的用途），您可以直接点击创建按钮。"
+    placeholder: "例如:用於app server佈署容器"
+  saveWarning1: "請保存上面的Key！Secret Key僅顯示一次"
+  saveWarning2: "如果忘記了Secret Key，您需要重新創建新的API Key"
+  noteOptional: "名稱和描述為選填（有助於紀錄API Key的用途），您可以直接點選建立按鈕。"
   #' fixes syntax highlighting so i dont go crazy
 
 editBalancerService:
-  title: 编辑负载均衡
+  title: 編輯負載均衡
   haproxy:
-    label: 配置文件(haproxy.cfg)
+    label: 設定文件(haproxy.cfg)
     help: |
-      '此处可以设置其他 <a href="http://cbonte.github.io/haproxy-dconv/configuration-1.5.html" target="_blank">haproxy.cfg</a>
-      配置项，相关内容将被附加到 {appName} 生成的配置中。'
+      '此處可設定其他 <a href="http://cbonte.github.io/haproxy-dconv/configuration-1.5.html" target="_blank">haproxy.cfg</a>
+      設定項目，相關內容將被附加到 {appName} 產生的配置中。'
     global:
       label: <code>global</code> section
-      prompt: 自定义的global section设置
+      prompt: 自訂global section設定
     defaults:
       label: <code>defaults</code> section
-      prompt: 自定义的default section设置
+      prompt: 自訂default section設定
 
 editCertificate:
-  title: 编辑证书
+  title: 編輯憑證
   name:
     placeholder: '例如:mydomain.com'
   description:
-    placeholder: '例如:mydomain.com的EV证书'
-  noteKeyWriteOnly: "注意:Private Key部分为只写(write only)因而显示为空白。更新证书时您需要重新上传Private Key，即便Private Key未发生变化。"
+    placeholder: '例如:mydomain.com的EV憑證'
+  noteKeyWriteOnly: "注意:Private Key部分為只能寫入(write only)因而顯示為空白。更新憑證時您需要重新上傳Private Key，即使Private Key未改變。"
 
 editContainer:
   title:
-    vm: 编辑虚拟机
-    container: 编辑容器
+    vm: 編輯虛擬機
+    container: 編輯容器
   name:
     placeholder: '例如:myapp'
   description:
-    placeholder: '例如:我的应用'
+    placeholder: '例如:我的應用'
 
 editExternalService:
-  title: 编辑外部服务
+  title: 編輯外部服務
   name:
     placeholder: '例如:external-db'
   description:
-    placeholder: '例如:外部物理数据库服务器'
+    placeholder: '例如:外部實體資料庫伺服器'
 
 editHost:
-  title: 编辑主机
+  title: 編輯主機
   hostname:
-    label: 主机名
-    help: 由主机操作系统获取
+    label: 主機名稱
+    help: 由主機作業系統回報
   customName:
-    label: 自定义名称
+    label: 自訂義名稱
     placeholder: '例如:dev1'
-    help: 如果此处未设置，名称将显示为主机名
+    help: 如果此處未設定，名稱將顯示為主機名
   description:
     label: 描述
-    placeholder: '例如:我的开发主机'
+    placeholder: '例如:我的開發主機'
   labels:
-    label: 标签
+    label: 標籤
 
 editRegistry:
-  title: 编辑镜像库
+  title: 编辑映像倉庫
   address:
-    label: 地址
+    label: 位址
   email:
-    label: 邮箱
+    label: 電子郵件
     placeholder: '例如:you@example.com'
   username:
     label: 用户名
     placeholder: '例如:username'
   password:
-    label: 密码
+    label: 密碼
     placeholder: '例如:password'
 
 editService:
-  title: 编辑服务
+  title: 編輯服務
 
 editStack:
-  title: 编辑应用栈
+  title: 編輯應用棧
   name:
-    label: 名称
+    label: 名稱
     placeholder: '例如:myapp'
   description:
     label: 描述
     placeholder: "例如:MyApp Stack"
 
 environmentHeader:
-  backLink: '应用栈:'
-  outputs: 输出
+  backLink: '應用棧:'
+  outputs: 輸出
   add:
-    service: 添加服务
-    balancer: 添加负载均衡
-    external: 添加外部服务
-    alias: 添加服务别名
-    vm: 添加虚拟机
+    service: 增加服務
+    balancer: 增加負載平衡
+    external: 增加外部服務
+    alias: 增加服務別名
+    vm: 增加虛擬機
 
 formatIp:
-  noIp: 无
+  noIp: 無
   unknownIp: 未知
 
 formBalancerListeners:
-  label: 监听端口
+  label: 監聽埠
   addAction: 添加端口
   table:
     host: 源IP/端口
