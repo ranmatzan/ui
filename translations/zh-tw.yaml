@@ -1375,22 +1375,22 @@ formatIp:
 
 formBalancerListeners:
   label: 監聽埠
-  addAction: 添加端口
+  addAction: 增加連接埠
   table:
-    host: 源IP/端口
-    protocol: 协议
+    host: 來源IP/連接埠
+    protocol: 協議
     ssl: SSL
-    container: 缺省目标端口
-    listener: 通道
+    container: 預設目標連接埠
+    listener: 通過
   host:
-    placeholder: "主机侧端口，例如:80"
+    placeholder: "主機端連接埠，例如:80"
   protocol:
-    placeholder: '选择协议:'
+    placeholder: '選擇協定:'
   container:
-    placeholder: "容器侧端口，例如:8080"
+    placeholder: "容器端連接埠，例如:8080"
   listen:
-    public: 公开
-    internal: 内部
+    public: 公開
+    internal: 內部
 
 formCommand:
   command:
@@ -1400,106 +1400,106 @@ formCommand:
     label: 入口
     placeholder: "例如:/bin/sh -c"
   workingDir:
-    label: 工作目录
+    label: 工作目錄
     placeholder: '例如:/myapp'
   user:
     label: 用户
     placeholder: '例如:apache'
   console:
     label: 控制台
-    both: '交互 &amp; TTY终端 <span class="text-muted">(-i -t)</span>'
-    interactive: '交互 <span class="text-muted">(-i)</span>'
+    both: '互動 &amp; TTY终端 <span class="text-muted">(-i -t)</span>'
+    interactive: '互動 <span class="text-muted">(-i)</span>'
     terminal: 'TTY终端 <span class="text-muted">(-t)</span>'
-    none: 无
+    none: 無
   autoRestart:
-    label: 自动重启
-    startOnceFalse: 总是
-    startOnceTrue: 从不（仅启动一次）
-    no: 从不
-    onFailure: '失败时 <span class="text-muted">(非0退出代码)</span> 总是'
-    onFailureCondPrefix: 失败时，最多
+    label: 自動重啟
+    startOnceFalse: 總是
+    startOnceTrue: 從不（僅啟動一次）
+    no: 從不
+    onFailure: '失敗時 <span class="text-muted">(非0退出代碼)</span> 總是'
+    onFailureCondPrefix: 失敗時，最多
     onFailureCondSuffix: |
       {limit, plural,
         =1 {次}
         other {次}
       }
-    always: 总是
+    always: 總是
   environment:
-    label: 环境变量
-    addAction: 添加环境变量
-    keyLabel: 变量
+    label: 環境變量
+    addAction: 增加環境變量
+    keyLabel: 變量
     keyPlaceholder: '例如:foo'
     valueLabel: 值
     valuePlaceholder: '例如:bar'
 
 formContainerLinks:
-  label: 链接
-  addActionLabel: 添加链接
-  noContainers: 没有其他容器可链接
-  noLinks: 当前容器没有链接
+  label: 連結
+  addActionLabel: 增加連結
+  noContainers: 沒有其他容器可連接
+  noLinks: 目前容器沒有連接
   targetInstance:
-    label: 目标容器
-    prompt: 选择一个容器...
+    label: 目標容器
+    prompt: 選擇一個容器...
   name:
-    label: 名称
+    label: 名稱
     placeholder: '例如:database'
 
 formDisks:
-  addDiskLabel: 添加磁盘
-  addRootDiskLabel: 添加根磁盘
+  addDiskLabel: 增加磁碟
+  addRootDiskLabel: 增加根磁碟
   name:
-    rootDisk: 根磁盘
-    label: 名称
+    rootDisk: 根磁碟
+    label: 名稱
     placeholder: '例如:data'
   size:
     label: 大小
-    rootDisk: 由系统镜像决定
+    rootDisk: 由系統映像決定
   driver:
-    label: 驱动
+    label: 驅動
 
 formEngineOpts:
   engineInstallUrl:
-    label: Docker安装URL
+    label: Docker安裝URL
     placeholder: "例如:http://get.docker.com"
   engineStorageDriver:
-    label: 存储驱动
+    label: 存儲驅動
     placeholder: '例如:overlay'
   engineOpts:
-    label: 引擎选项
-    addActionLabel: 添加引擎选项
+    label: 引擎選項
+    addActionLabel: 增加引擎選項
     keyPlaceholder: '例如:log-driver'
     valuePlaceholder: '例如:syslog'
   engineLabels:
-    label: 引擎标签
-    addActionLabel: 添加引擎标签
-    keyLabel: 标签
+    label: 引擎標籤
+    addActionLabel: 增加引擎標籤
+    keyLabel: 標籤
   engineEnv:
-    label: 引擎环境
-    addActionLabel: 添加环境变量
-    keyLabel: 变量
+    label: 引擎環境
+    addActionLabel: 增加環境變量
+    keyLabel: 變量
     keyPlaceholder: '例如:HTTP_PROXY'
     valuePlaceholder: "例如:http://your-proxy:8080"
   engineInsecureRegistry:
-    label: 非安全镜像库
-    addActionLabel: 添加非安全镜像库
-    valueLabel: 镜像库域名
+    label: 非安全映像庫
+    addActionLabel: 增加非安全映像庫
+    valueLabel: 映像庫域名
     valuePlaceholder: '例如:registry.example.com'
   engineRegistryMirror:
-    label: 镜像库镜像
-    addActionLabel: 添加镜像库镜像
-    valueLabel: 镜像URL
+    label: 映像庫映像
+    addActionLabel: 增加映像庫映像
+    valueLabel: 映像URL
     valuePlaceholder: "例如:https://my-mirror.example.com:5000"
 
 formHealthCheck:
-  label: 健康检查
+  label: 健康檢查
   checkType:
-    none: 无
-    tcp: TCP连接
-    http: HTTP响应2xx/3xx
+    none: 無
+    tcp: TCP連接
+    http: HTTP回應2xx/3xx
   request:
-    label: HTTP请求
+    label: HTTP請求
   method:
-    prompt: 选择HTTP方法
+    prompt: 選擇HTTP方法
   path:
     placeholder: '请求路径，例如:/healthcheck'
   version:
