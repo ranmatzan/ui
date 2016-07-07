@@ -1499,87 +1499,87 @@ formHealthCheck:
   request:
     label: HTTP請求
   method:
-    prompt: 選擇HTTP方法
+    prompt: 選擇HTTP方式
   path:
-    placeholder: '请求路径，例如:/healthcheck'
+    placeholder: '請求路徑，例如:/healthcheck'
   version:
-    prompt: 选择HTTP版本
+    prompt: 選擇HTTP版本
   host:
-    label: 主机头信息
+    label: 主機名稱
     placeholder: '例如:www.example.com'
   port:
-    label: 端口
+    label: 連接埠
     placeholder: '例如:80'
   initializingTimeout:
-    label: 初始化超时
+    label: 初始化超時
     unit: 毫秒
   interval:
-    label: 检查间隔
+    label: 檢查間隔
     unit: 毫秒
   timeout:
-    label: 检查超时
+    label: 檢查超時
     unit: 毫秒
   healthyThreshold:
-    label: 健康阈值
-    unit: 次成功
+    label: 健康閥值
+    unit: 成功
   unhealthyThreshold:
-    label: 不健康阈值
-    unit: 次失败
+    label: 不健康閥值
+    unit: 失敗
   strategy:
-    label: 不健康时
-    none: 不进行操作
-    recreate: 重新创建
-    recreateOnQuorumPrefix: 重新创建，仅当至少
+    label: 不健康時
+    none: 不進行操作
+    recreate: 重新建立
+    recreateOnQuorumPrefix: 重新建立，只有至少
     recreateOnQuorumSuffix: |
       {quorum, plural,
-        =1 {个容器}
-        other {个容器}
-      } 健康时
+        =1 {個容器}
+        other {個容器}
+      } 健康時
 
 formKeyValue:
-  addAction: 添加键值对
+  addAction: 增加關鍵值
   key:
-    label: 键
-    placeholder: 键
+    label: 鍵
+    placeholder: 鍵
   separator: "="
   value:
     label: 值
     placeholder: 值
-  protip: "高级技巧: 在键(Key)输入栏中粘贴一行或多行的key=value键值对能够批量输入。"
+  protip: "進階技巧: 在鍵(Key)輸入欄中黏貼一行或多行的key=value鍵值對能夠大量輸入。"
 
 formImage:
-  label: 选择镜像
+  label: 選擇映像
   vm:
     placeholder: 例如:rancher/vm-ubuntu
-    dropdownLabel: "{appName} 镜像"
+    dropdownLabel: "{appName} 映像"
   container:
     placeholder: "例如:ubuntu:trusty"
   pullImage:
-    label: 创建前总是拉取镜像
+    label: 總是在建立前拉取映像
 
 formNameDescription:
   name:
-    label: 名称
-    placeholder: 名称
+    label: 名稱
+    placeholder: 名稱
   description:
     label: 描述
     placeholder: 描述
 
 formPorts:
-  addAction: 端口映射
+  addAction: 連接埠對應
   public:
-    label: "公开主机[IP:]端口"
+    label: "公有主機[IP:]連接埠"
     placeholderWithIp: "例如:80 或 1.2.3.4:80"
     placeholderWithoutIp: '例如:80'
   private:
-    label: 私有容器端口
+    label: 私有容器連接埠
     placeholder: '例如:8080'
   protocol:
-    label: 协议
-  noPorts: 当前容器没有端口映射
+    label: 協定
+  noPorts: 當前容器沒有對應連接埠
 
 formScale:
-  label: 数量
+  label: 數量
   global:
     vm: 总是在每台主机上运行一个此虚拟机的实例
     container: 总是在每台主机上运行一个此容器的实例
