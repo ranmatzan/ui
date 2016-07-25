@@ -1581,88 +1581,88 @@ formPorts:
 formScale:
   label: 數量
   global:
-    vm: 总是在每台主机上运行一个此虚拟机的实例
-    container: 总是在每台主机上运行一个此容器的实例
+    vm: 總是在每台主機運行一個此處虛擬機的實例
+    container: 總是在每台主機上運行一個此容器的實例
   regular:
     vm: |
       Run {scale, plural,
-        =0 {无虚拟机}
-        =1 {1 台虚拟机}
-        other {# 台虚拟机}
+        =0 {無虛擬機}
+        =1 {1 台虛擬機}
+        other {# 台虛擬機}
       }
     container: |
       Run {scale, plural,
-        =0 {无容器}
-        =1 {1 个容器}
-        other {# 个容器}
+        =0 {無容器}
+        =1 {1 個容器}
+        other {# 個容器}
       }
 
 formSecurity:
   logConfig:
-    addActionLabel: 添加选项
+    addActionLabel: 增加選項
     keyPlaceholder: '例如:syslog-facility'
     valuePlaceholder: '例如:daemon'
-  privileged: 特权
-  fullAccess: 主机完全访问权限
+  privileged: 特權
+  fullAccess: 主機完全存取權限
   pidMode: PID模式
-  host: 主机
-  memoryLimit: 内存限制
+  host: 主機
+  memoryLimit: 記憶體限制
   mb: MB
   swapLimit: +Swap限制
-  cpuPinning: CPU绑定
-  shares: 份额
-  capabilities: 内核能力
+  cpuPinning: CPU綁定
+  shares: 份額
+  capabilities: 内核功能
   helpBlock:
-    text: 内核能力能够对容器所拥有的超级用户权限进行更细粒度的控制
-    link: 更多信息
-  deviceBinding: 设备绑定
-  pathHost: 主机内路径
-  pathContainer: 容器内路径
-  permissions: 权限
-  logDriver: 日志驱动
-  logOptions: 日志选项
+    text: 內核功能能够對容器所擁有的超級用戶權限進行更細密的控制
+    link: 更多資訊
+  deviceBinding: 設備綁定
+  pathHost: 主機內部路徑
+  pathContainer: 容器內部路徑
+  permissions: 權限
+  logDriver: 日誌驅動
+  logOptions: 日誌選項
 
 formServiceLinks:
-  addAction: 服务链接
-  noServices: 无其他服务可链接
-  noLinks: 当前服务没有服务链接
+  addAction: 服務連結
+  noServices: 無其他服務可連結
+  noLinks: 當前服務沒有服務連結
   service:
-    label: 目标服务
-    prompt: 选择服务...
+    label: 目標服務
+    prompt: 選擇服務...
   name:
-    label: 名称
+    label: 名稱
     placeholder: '例如:database'
 
 formSslTermination:
   defaultCertificate:
-    prompt: 选择证书...
+    prompt: 選擇憑證...
   alternateCertificate:
-    prompt: 选择证书...
+    prompt: 選擇憑證...
 
 formTargets:
-  title: 目标
-  addAction: 添加服务
+  title: 目標
+  addAction: 增加服務
   hostname:
-    label: 请求主机
+    label: 要求主機
     placeholder: '例如:svc.com'
   srcPort:
-    label: 源端口
+    label: 來源連接埠
     placeholder: '例如:80'
   value:
-    label: 目标服务
-    prompt: 选择服务...
+    label: 目標服務
+    prompt: 選擇服務...
   path:
-    label: 请求路径
+    label: 要求路径
     placeholder: "例如: /svc"
   dstPort:
-    label: 目标端口
+    label: 目標連接埠
     placeholder: '例如:8080'
   advanced:
-    toggle: 显示高级路由选项
-    detail: 根据端口、主机头或请求路径等信息将请求转发到不同服务
+    toggle: 顯示進階路由選項
+    detail: 根據連接埠、主機標頭或要求路徑等訊息將要求轉發到不同服務
     help1: |
-      如果指定了请求主机和/或路径，HTTP监听端口上的连接将会被路由到基于请求的合适目标。
-      例如，您可以使用此设置根据请求主机信息domain1.com 和 domain2.com将访问发送到不同服务，或者将 domain3.com/admin的访问发送到一个不同的服务上。
+      如果指定了要求主機和/或路径，HTTP監聽埠上的連接將會被路由到基於要求的合適目標。
+      例如，您可以使用此設定根據要求主機訊息domain1.com 和 domain2.com将访问发送到不同服务，或者将 domain3.com/admin的访问发送到一个不同的服务上。
     help2: |
       匹配的请求将会被发送到目标服务的目标端口。
       如果目标端口未设置，将使用缺省目标端口。如果缺省目标端口也未设置，将使用源端口。
